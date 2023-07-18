@@ -167,6 +167,105 @@ nav ul li a {
 }
 
 /* funny videos section style */
+.container {
+  padding: 30px 240px;
+  margin-top: 50px;
+}
+
+.funny-video-heading {
+  text-align: center;
+}
+
+.funny-video-heading h3 {
+  color: #0b0223;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.funny-video-heading span {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.funny-video-heading p {
+  color: #534c64;
+}
+
+.video-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.video-card {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.video-card img {
+  width: 250px;
+  display: block;
+}
+
+.video-card p {
+  width: 250px;
+  color: #534c64;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 13px;
+  line-height: 20px;
+}
+
+.video-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  border-radius: 9px;
+  background-color: rgba(0, 0, 0, 0.8); /* Black color with 50% opacity */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card::after {
+  content: '\f01d'; /* Play icon (Font Awesome) - You can replace this with your own icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.watch-now-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f948b2;
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover::before,
+.video-card:hover::after,
+.video-card:hover .watch-now-text {
+  opacity: 1;
+}
 
 /* play instantly section style */
 
@@ -233,6 +332,47 @@ nav ul li a {
     -webkit-text-fill-color: transparent;
     font-size: 4rem;
     font-weight: 800;
+  }
+
+  /* funny videos section */
+  .container {
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+
+  .video-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .funny-video-heading h3 {
+    color: #0b0223;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .funny-video-heading p {
+    color: #534c64;
+    font-size: 0.8rem;
+  }
+
+  .video-card img {
+    width: 290px;
+    display: block;
+  }
+
+  .video-card p {
+    width: 250px;
+    color: #534c64;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 13px;
+    margin-left: 20px;
+    line-height: 20px;
   }
 }
 
@@ -324,5 +464,46 @@ nav ul li a {
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
     font-weight: 800;
+  }
+
+  /* funny videos section */
+  .container {
+    padding: 10px 20px;
+    /* margin-top: 50px; */
+    margin: 30px 50px;
+  }
+
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .funny-video-heading h3 {
+    color: #0b0223;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .funny-video-heading p {
+    color: #534c64;
+    font-size: 0.9rem;
+  }
+
+  .video-card img {
+    width: 290px;
+    display: block;
+  }
+
+  .video-card p {
+    width: 250px;
+    color: #534c64;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 13px;
+    margin-left: 20px;
+    line-height: 20px;
   }
 }
