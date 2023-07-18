@@ -9,13 +9,45 @@
 }
 
 /* shared styles */
+.btn-primary {
+  border-radius: 48px;
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  width: 120px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  border-radius: 48px;
+  background: #4ec5f7;
+  width: 120px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
 
 /* header styles */
 header {
-  padding: 38px 240px;
+  /* background-image: url(./images/group-14.png); */
+  /* padding: 30px 240px; */
 }
 
 /* navbar styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 240px;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -32,11 +64,6 @@ header {
 
 .logo h3 {
   font-size: 2rem;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav ul {
@@ -87,6 +114,57 @@ nav ul li a {
 }
 
 /* banner style */
+.banner-section {
+  background-image: url(./images/group-14.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 240px;
+}
+
+.banner img {
+  height: 500px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-heading h3 {
+  color: #0b0223;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.banner-heading h2 {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.banner-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.banner-button {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
 
 /* funny videos section style */
 
@@ -98,9 +176,153 @@ nav ul li a {
 
 /* responsive styles */
 /* for mobile */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 425px) {
+  /* navbar styles */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  /* banner styles */
+  .banner-section {
+    background-image: none;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner img {
+    order: 1;
+    height: 400px;
+  }
+
+  .banner-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .banner-heading h3 {
+    color: #0b0223;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .banner-heading h2 {
+    background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 800;
+  }
 }
 
 /* for tablet */
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* navbar styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .follow-us {
+    display: flex;
+    width: 200px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.1);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .follow-us span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3c354f;
+  }
+
+  .follow-us .youtube {
+    width: 18px;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+
+  .follow-us .tiktok {
+    width: 18px;
+    margin-left: 5px;
+    margin-top: 4px;
+  }
+
+  .banner-section {
+    background-image: none;
+  }
+
+  /* banner styles */
+  .banner {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+
+  .banner img {
+    height: 350px;
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .banner-heading h3 {
+    color: #0b0223;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .banner-heading h2 {
+    background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 800;
+  }
 }
