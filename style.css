@@ -208,7 +208,7 @@ nav ul li a {
 }
 
 .video-card img {
-  width: 250px;
+  width: 230px;
   display: block;
 }
 
@@ -229,13 +229,13 @@ nav ul li a {
   width: 100%;
   height: 85%;
   border-radius: 9px;
-  background-color: rgba(0, 0, 0, 0.8); /* Black color with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .video-card::after {
-  content: '\f01d'; /* Play icon (Font Awesome) - You can replace this with your own icon */
+  content: '\f01d';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 60px;
@@ -334,21 +334,25 @@ nav ul li a {
 }
 
 .category {
-  width: 220px;
+  width: 180px;
   height: 70px;
   border-radius: 50px;
   background: #fff;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0 5px;
+  margin: 0 6px;
 }
 
 .category h4 {
   margin-left: auto;
   padding-right: 8px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.category img {
+  width: 40px;
 }
 
 .category:hover {
